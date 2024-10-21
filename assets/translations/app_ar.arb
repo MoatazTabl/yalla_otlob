@@ -1,0 +1,32 @@
+{
+  "@_SignInPage": {},
+  "login": "تسجيل الدخول",
+  "userName": "اسم المستخدم",
+  "password": "الرقم السري",
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "signUp": "أفتح حساب",
+
+  "@_SignUpPage": {},
+  "createYourAccount": "أنشئ حسابك",
+  "name": "الاسم",
+  "email": "البريد إلكتروني",
+  "phone": "رقم الهاتف",
+  "address1": "العنوان 1",
+  "address2": "العنوان 2",
+  "confirmPassword": "تأكيد كلمة المرور",
+  "register": "تسجيل",
+  "alreadyHaveAnAccount": "هل لديك حساب بالفعل؟",
+
+  "@_Validator": {},
+  "pleaseEnterUserName": "أدخل اسم المستخدم",
+  "pleaseEnterPassword": "أدخل الرقم السري",
+  "pleaseEnterName": "إدخل الاسم",
+  "pleaseEnterEmail": "إدخل البريد الإلكتروني.",
+  "pleaseEnterPhone": "إدخل رقم الهاتف",
+  "pleaseEnterCorrectPhoneNumber": "إدخل رقم هاتف صحيح",
+  "invalidEmail": "البريد الإلكتروني غير صالح",
+  "pleaseEnterAddress": "إدخل العنوان.",
+  "passMustBeMoreThan8Char": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.",
+  "passDontMatch": "كلمة المرور غير متطابقة."
+
+}

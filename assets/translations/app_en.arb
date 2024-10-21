@@ -1,0 +1,34 @@
+{
+  "@_SignInPage": {},
+  "login": "Log In",
+  "userName": "Username",
+  "password": "Password",
+  "dontHaveAccount": "Don't Have Account?",
+  "signUp": "SignUp Now",
+
+  "@_SignUpPage": {},
+  "createYourAccount": "Create your account",
+  "name": "Name",
+  "email": "Email",
+  "phone": "Phone",
+  "address1": "Address 1",
+  "address2": "Address 2",
+  "confirmPassword": "Confirm Password",
+  "register": "Register",
+  "alreadyHaveAnAccount": "Already have an account?",
+
+
+  "@_Validator": {},
+  "pleaseEnterUserName": "Enter username",
+  "pleaseEnterPassword": "Enter password",
+  "pleaseEnterName": "Enter Name",
+  "pleaseEnterEmail": "Enter Email.",
+  "pleaseEnterPhone": "Enter Phone",
+  "pleaseEnterCorrectPhoneNumber": "Enter Correct Phone Number",
+  "invalidEmail": "Invalid Email",
+  "pleaseEnterAddress": "Enter Address.",
+  "passMustBeMoreThan8Char": "Password must be at least 8 character.",
+  "passDontMatch": "Password doesn't match."
+
+
+}
