@@ -37,7 +37,7 @@ class LogInButton extends StatelessWidget {
             context.pushReplacement(AppStrings.userHomeScreenRoute);
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
+              const SnackBar(
                 content: Text(
                   "admin or driver or partner or user.",
                 ),

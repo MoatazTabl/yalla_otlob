@@ -1,6 +1,6 @@
+import 'package:dahab_delivery/core/app_images.dart';
 import 'package:flutter/material.dart';
 
-import '../app_strings.dart';
 
 class DahabImageWidget extends StatelessWidget {
   const DahabImageWidget({
@@ -13,7 +13,7 @@ class DahabImageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image(
       image: AssetImage(
-        AppStrings.dahabLogo,
+        AppImages.dahabLogo,
       ),
       height: height,
       width: width,

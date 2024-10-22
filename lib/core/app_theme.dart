@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 
 abstract class AppTheme {
   static Color mainRed = const Color(0xffee1d23);
+  static Color mainGrey = const Color(0xff121212);
   static ThemeData lightTheme = ThemeData(
-    scaffoldBackgroundColor:const Color(0xffFAFAE6),
+    brightness: Brightness.light,
+    scaffoldBackgroundColor: const Color(0xffFAFAE6),
     textTheme: AppFonts.textTheme,
     colorSchemeSeed: mainRed,
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -16,14 +18,25 @@ abstract class AppTheme {
         foregroundColor: WidgetStateProperty.all(Colors.white),
       ),
     ),
-
-    snackBarTheme: SnackBarThemeData(backgroundColor: mainRed,behavior: SnackBarBehavior.floating),
+    appBarTheme: AppBarTheme(
+      backgroundColor: mainRed,
+      foregroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(
+            14,
+          ),
+        ),
+      ),),
+    snackBarTheme: SnackBarThemeData(
+        backgroundColor: mainRed, behavior: SnackBarBehavior.floating),
   );
 
-
   static ThemeData darkTheme = ThemeData(
+    brightness: Brightness.dark,
+
     textTheme: AppFonts.textTheme,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: mainGrey,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
         backgroundColor: WidgetStateProperty.all(mainRed),
@@ -31,10 +44,20 @@ abstract class AppTheme {
           TextStyle(color: Colors.white),
         ),
         foregroundColor: WidgetStateProperty.all(Colors.white),
-
       ),
     ),
-    snackBarTheme: SnackBarThemeData(backgroundColor: mainRed,behavior: SnackBarBehavior.floating),
-
+    appBarTheme: AppBarTheme(
+      backgroundColor: mainRed,
+      foregroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(
+            14,
+          ),
+        ),
+      ),
+    ),
+    snackBarTheme: SnackBarThemeData(
+        backgroundColor: mainRed, behavior: SnackBarBehavior.floating),
   );
 }

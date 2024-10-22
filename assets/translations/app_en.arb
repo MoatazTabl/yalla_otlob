@@ -17,6 +17,14 @@
   "register": "Register",
   "alreadyHaveAnAccount": "Already have an account?",
 
+  "@_UserFeature": {},
+  "hello": "Hello",
+  "orders": "Orders",
+  "food": "Food",
+  "market": "Market",
+  "pharmacy": "Pharmacy",
+  "topCategory": "Top Category",
+  "restaurants": "Restaurants",
 
   "@_Validator": {},
   "pleaseEnterUserName": "Enter username",

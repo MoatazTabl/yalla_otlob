@@ -17,6 +17,16 @@
   "register": "تسجيل",
   "alreadyHaveAnAccount": "هل لديك حساب بالفعل؟",
 
+  "@_UserFeature": {},
+  "hello": "مرحبا",
+  "orders": "الطلبات",
+  "food": "طعام",
+  "market": "متجر",
+  "pharmacy": "صيدلية",
+  "topCategory": "أهم الفئات",
+  "restaurants": "المطاعم",
+
+
   "@_Validator": {},
   "pleaseEnterUserName": "أدخل اسم المستخدم",
   "pleaseEnterPassword": "أدخل الرقم السري",

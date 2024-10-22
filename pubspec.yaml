@@ -22,6 +22,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   cached_network_image: ^3.4.1
   google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10+1
   flutter_localizations:
     sdk: flutter
   intl: any
@@ -46,6 +47,7 @@ flutter:
   assets:
     - assets/images/
     - assets/translations/
+    - assets/svg/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

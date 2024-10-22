@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-abstract class AppFonts {
+class AppFonts {
+
   static TextTheme textTheme = TextTheme(
     headlineLarge: GoogleFonts.roboto(
       textStyle: TextStyle(
         fontWeight: FontWeight.w900,
         fontSize: 40.sp,
       ),
-    ),headlineSmall: GoogleFonts.roboto(
+    ),
+    headlineSmall: GoogleFonts.roboto(
       textStyle: TextStyle(
         fontWeight: FontWeight.w500,
         fontSize: 18.sp,
@@ -21,15 +23,17 @@ abstract class AppFonts {
     ),
     labelMedium: GoogleFonts.roboto(
       textStyle: TextStyle(
-          fontSize: 20.sp, fontWeight: FontWeight.w400, color: Colors.white),
+        fontSize: 20.sp,
+        fontWeight: FontWeight.w400,
+        color: const Color(
+          0xff1D1D21,
+        ),
+      ),
     ),
     labelSmall: GoogleFonts.roboto(
       textStyle: TextStyle(
-        fontSize: 18.sp,
-        fontWeight: FontWeight.w300,
-        color: Colors.black.withOpacity(
-          .37,
-        ),
+        fontSize: 14.sp,
+        fontWeight: FontWeight.w400,
       ),
     ),
   );
