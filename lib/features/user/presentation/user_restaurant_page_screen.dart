@@ -13,10 +13,7 @@ class UserRestaurantPageScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           getAppLocalizations(context)!.food,
-          style: Theme.of(context)
-              .textTheme
-              .labelMedium
-              ?.copyWith(color: Colors.white),
+
         ),
       ),
       body: Padding(

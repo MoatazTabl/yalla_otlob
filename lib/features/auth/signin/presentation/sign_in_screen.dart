@@ -49,7 +49,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                     labelText: getAppLocalizations(context)?.userName,
-                    prefixIcon: const Icon(Icons.person_outline),
+                    prefixIcon:  Icon(Icons.person_outline,color: Colors.grey[600],),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -74,7 +74,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
                     labelText: getAppLocalizations(context)?.password,
-                    prefixIcon: const Icon(Icons.password_outlined),
+                    prefixIcon: Icon(Icons.password_outlined,color: Colors.grey[600],),
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -82,8 +82,8 @@ class _SignInScreenState extends State<SignInScreen> {
                         });
                       },
                       icon: _obscurePassword
-                          ? const Icon(Icons.visibility_outlined)
-                          : const Icon(Icons.visibility_off_outlined),
+                          ?  Icon(Icons.visibility_outlined,color: Colors.grey[600],)
+                          :  Icon(Icons.visibility_off_outlined,color: Colors.grey[600],),
                     ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),

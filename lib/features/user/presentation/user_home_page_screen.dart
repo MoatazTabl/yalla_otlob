@@ -18,10 +18,7 @@ class UserHomePageScreen extends StatelessWidget {
           padding: EdgeInsets.only(left: 8.w),
           child: Text(
             "${getAppLocalizations(context)?.hello} Moataz!",
-            style: Theme.of(context)
-                .textTheme
-                .labelMedium
-                ?.copyWith(color: Colors.white),
+
           ),
         ),
         actions: [
@@ -48,9 +45,12 @@ class UserHomePageScreen extends StatelessWidget {
                   .labelLarge
                   ?.copyWith(color: Theme.of(context).brightness==Brightness.dark?Colors.white:Colors.black87),
             ),
+            SizedBox(height: 10.h,),
             Wrap(
-              spacing: 10,
-              runSpacing: 10,
+               spacing: 20.w,
+              runSpacing: 20.h,
+              runAlignment: WrapAlignment.spaceBetween,
+              direction: Axis.horizontal,
               children: [
                 CategoryWidget(
                   categoryName: getAppLocalizations(context)!.food,
@@ -70,6 +70,14 @@ class UserHomePageScreen extends StatelessWidget {
                 CategoryWidget(
                   categoryName: getAppLocalizations(context)!.pharmacy,
                   categoryPicPath: AppImages.pharmacyPic,
+                  onTap: () {
+                    context.push(AppStrings.userPharmacyScreenRoute);
+
+                  },
+                ),
+              CategoryWidget(
+                  categoryName: getAppLocalizations(context)!.wslny,
+                  categoryPicPath: AppImages.wslnyPic,
                   onTap: () {
                     context.push(AppStrings.userPharmacyScreenRoute);
 

@@ -10,11 +10,13 @@ class AvailableRestaurantWidget extends StatelessWidget {
   const AvailableRestaurantWidget({super.key, required this.heroTag});
 
   final String heroTag;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        context.push(AppStrings.userRestaurantDetailScreenRoute,extra: heroTag);
+      onTap: () {
+        context.push(AppStrings.userRestaurantDetailScreenRoute,
+            extra: heroTag);
       },
       child: Container(
         height: 170.h,
@@ -29,27 +31,32 @@ class AvailableRestaurantWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-             Row(
+            Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Hero(
                   tag: heroTag,
                   child: const RestaurantPictureWidget(
                     imageUrl:
-                    "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-logo%2Crestaurant-icon-logo-free-design-template-e4e92c7d3b5631a777fce7a5d629a00a_screen.jpg?ts=1662468709",
+                        "https://bcassetcdn.com/public/blog/wp-content/uploads/2019/07/18094837/golden-diner.png",
                   ),
                 ),
-                const RestaurantNameAndDescriptionWidget(restaurantName: 'Bazooka', restaurantDescription: 'a great fried chicken restaurant',),
+                const RestaurantNameAndDescriptionWidget(
+                  restaurantName: 'Bazooka',
+                  restaurantDescription: 'a great fried chicken restaurant',
+                ),
               ],
             ),
             SizedBox(
               height: 5.h,
             ),
-            const RestaurantQuickInfo(deliveryFee: '20', deliveryTime: '30',),
+            const RestaurantQuickInfo(
+              deliveryFee: '20',
+              deliveryTime: '30',
+            ),
           ],
         ),
       ),
     );
   }
 }
-

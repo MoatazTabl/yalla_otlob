@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/helpers/common.dart';
-import 'widgets/order_detail_widget.dart';
+import 'widgets/history_order_detail_widget.dart';
 
 class UserHistoryPageScreen extends StatelessWidget {
   const UserHistoryPageScreen({super.key});
@@ -12,10 +12,6 @@ class UserHistoryPageScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           getAppLocalizations(context)!.orders,
-          style: Theme.of(context)
-              .textTheme
-              .labelMedium!
-              .copyWith(color: Colors.white),
         ),
       ),
       body: Column(
@@ -24,7 +20,7 @@ class UserHistoryPageScreen extends StatelessWidget {
             child: ListView.builder(
               itemCount: 4,
               itemBuilder: (context, index) {
-                return const OrderDetailWidget();
+                return const HistoryOrderDetailWidget();
               },
             ),
           )

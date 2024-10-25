@@ -4,13 +4,17 @@ import 'package:dahab_delivery/features/auth/signin/presentation/sign_in_screen.
 import 'package:dahab_delivery/features/auth/signup/presentation/sign_up_screen.dart';
 import 'package:dahab_delivery/features/driver/presentation/driver_home_page_screen.dart';
 import 'package:dahab_delivery/features/partner/presentation/partner_home_page_screen.dart';
+import 'package:dahab_delivery/features/user/manager/menu_cubit.dart';
+import 'package:dahab_delivery/features/user/presentation/user_confirm_page_screen.dart';
 import 'package:dahab_delivery/features/user/presentation/user_history_page_screen.dart';
 import 'package:dahab_delivery/features/user/presentation/user_home_page_screen.dart';
 import 'package:dahab_delivery/features/user/presentation/user_market_page_screen.dart';
+import 'package:dahab_delivery/features/user/presentation/user_order_detail_page_screen.dart';
 import 'package:dahab_delivery/features/user/presentation/user_pharmacy_page_screen.dart';
 import 'package:dahab_delivery/features/user/presentation/user_restaurant_detail_page.dart';
 import 'package:dahab_delivery/features/user/presentation/user_restaurant_page_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -29,8 +33,8 @@ class AppRouter {
           return const SignUpScreen();
         },
       ),
-    // Admin
-    GoRoute(
+      // Admin
+      GoRoute(
         path: AppStrings.adminHomeScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const AdminHomePageScreen();
@@ -38,8 +42,8 @@ class AppRouter {
       ),
 
 
-    // Driver
-    GoRoute(
+      // Driver
+      GoRoute(
         path: AppStrings.driverHomeScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const DriverHomePageScreen();
@@ -47,8 +51,8 @@ class AppRouter {
       ),
 
 
-    // Partner
-    GoRoute(
+      // Partner
+      GoRoute(
         path: AppStrings.partnerHomeScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const PartnerHomePageScreen();
@@ -56,40 +60,55 @@ class AppRouter {
       ),
 
 
-    // User
-    GoRoute(
+      // User
+      GoRoute(
         path: AppStrings.userHomeScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const UserHomePageScreen();
         },
       ),
-     GoRoute(
+      GoRoute(
         path: AppStrings.userHistoryScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const UserHistoryPageScreen();
         },
       ),
-    GoRoute(
+      GoRoute(
         path: AppStrings.userRestaurantScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const UserRestaurantPageScreen();
         },
       ),
-    GoRoute(
+      GoRoute(
         path: AppStrings.userRestaurantDetailScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
-          return  UserRestaurantDetailPage(
-            heroTag: state.extra as String,
+          return BlocProvider(
+            create: (context) => MenuCubit(),
+            child: UserRestaurantDetailPage(
+              heroTag: state.extra as String,
+            ),
           );
         },
       ),
-    GoRoute(
+      GoRoute(
+        path: AppStrings.userOrderDetailScreenRoute,
+        builder: (BuildContext context, GoRouterState state) {
+          return const UserOrderDetailPageScreen();
+        },
+      ),
+      GoRoute(
+        path: AppStrings.userConfirmScreenRoute,
+        builder: (BuildContext context, GoRouterState state) {
+          return const UserConfirmPageScreen();
+        },
+      ),
+      GoRoute(
         path: AppStrings.userPharmacyScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const UserPharmacyPageScreen();
         },
       ),
-    GoRoute(
+      GoRoute(
         path: AppStrings.userMarketScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const UserMarketPageScreen();

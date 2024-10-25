@@ -12,19 +12,22 @@ class RestaurantPictureWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CachedNetworkImage(
-      imageUrl: imageUrl,
-      width: 100.w,
-      height: 120.h,
-      imageBuilder: (context, imageProvider) {
-        return ClipRRect(
-          borderRadius: BorderRadius.circular(14),
-          child: Image(
-            image: imageProvider,
-            fit: BoxFit.fill,
-          ),
-        );
-      },
+    return Padding(
+      padding: EdgeInsetsDirectional.only(start: 8.w),
+      child: CachedNetworkImage(
+        imageUrl: imageUrl,
+        width: 100.w,
+        height: 120.h,
+        imageBuilder: (context, imageProvider) {
+          return ClipRRect(
+            borderRadius: BorderRadius.circular(14),
+            child: Image(
+              image: imageProvider,
+              fit: BoxFit.fill,
+            ),
+          );
+        },
+      ),
     );
   }
 }

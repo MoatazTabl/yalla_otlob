@@ -15,7 +15,7 @@ class RestaurantQuickInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 10.w),
+      padding: EdgeInsetsDirectional.only(start: 10.w),
       child: Row(
         children: [
           SvgPicture.asset(

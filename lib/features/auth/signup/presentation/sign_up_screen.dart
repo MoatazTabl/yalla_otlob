@@ -67,7 +67,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 keyboardType: TextInputType.name,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.name,
-                  prefixIcon: const Icon(Icons.person_outline),
+                  prefixIcon:  Icon(Icons.person_outline,color: Colors.grey[600],),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -91,7 +91,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.email,
-                  prefixIcon: const Icon(Icons.email_outlined),
+                  prefixIcon:  Icon(Icons.email_outlined,color: Colors.grey[600],),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -117,7 +117,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.phone,
-                  prefixIcon: const Icon(Icons.phone),
+                  prefixIcon:  Icon(Icons.phone,color: Colors.grey[600],),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -145,7 +145,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 keyboardType: TextInputType.streetAddress,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.address1,
-                  prefixIcon: const Icon(Icons.my_location),
+                  prefixIcon:  Icon(Icons.my_location,color: Colors.grey[600],),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -168,7 +168,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 keyboardType: TextInputType.streetAddress,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.address2,
-                  prefixIcon: const Icon(Icons.my_location),
+                  prefixIcon:  Icon(Icons.my_location,color: Colors.grey[600],),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -186,7 +186,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.password,
-                  prefixIcon: const Icon(Icons.password_outlined),
+                  prefixIcon:  Icon(Icons.password_outlined,color: Colors.grey[600],),
                   suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -194,8 +194,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         });
                       },
                       icon: _obscurePassword
-                          ? const Icon(Icons.visibility_outlined)
-                          : const Icon(Icons.visibility_off_outlined)),
+                          ?  Icon(Icons.visibility_outlined,color: Colors.grey[600],)
+                          :  Icon(Icons.visibility_off_outlined,color: Colors.grey[600],),),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -223,7 +223,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.confirmPassword,
-                  prefixIcon: const Icon(Icons.password_outlined),
+                  prefixIcon:  Icon(Icons.password_outlined,color: Colors.grey[600],),
                   suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -231,8 +231,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         });
                       },
                       icon: _obscurePassword
-                          ? const Icon(Icons.visibility_outlined)
-                          : const Icon(Icons.visibility_off_outlined)),
+                          ?  Icon(Icons.visibility_outlined,color: Colors.grey[600],)
+                          :  Icon(Icons.visibility_off_outlined,color: Colors.grey[600],)),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -279,7 +279,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Navigator.pop(context);
                       }
                     },
-                    child: Text(getAppLocalizations(context)!.register),
+                    child: Text(getAppLocalizations(context)!.register,style: Theme.of(context).textTheme.labelLarge,),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
