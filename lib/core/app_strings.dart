@@ -5,7 +5,7 @@ abstract class AppStrings
 
   // routes
     // Auth
-  static String loginScreenRoute="/a";
+  static String loginScreenRoute="/";
   static String signupScreenRoute="/signupScreen";
 
     // Admin
@@ -18,7 +18,7 @@ abstract class AppStrings
   static String partnerHomeScreenRoute="/partnerHomeScreen";
 
     // User
-  static String userHomeScreenRoute="/";
+  static String userHomeScreenRoute="/userHomeScreenRoute";
   static String userHistoryScreenRoute="/userHistoryScreen";
   static String userRestaurantScreenRoute="/userRestaurantScreenRoute";
   static String userRestaurantDetailScreenRoute="/userRestaurantDetailScreenRoute";
