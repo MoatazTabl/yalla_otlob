@@ -18,7 +18,6 @@ class HistoryOrderDetailWidget extends StatelessWidget {
         ),
         width: .95.sw,
         height: 110.h,
-        padding: const EdgeInsets.all(8),
         margin: EdgeInsets.symmetric(vertical: 8.h),
         child: Align(
           alignment: Alignment.center,

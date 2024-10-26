@@ -41,6 +41,16 @@
   "confirmOrder": "Confirm Order",
   "approxDeliveryTime": "Approx Delivery Time: ",
   "min": " Min",
+  "address": "Address",
+  "addAnItem": "Add an item",
+  "typeAnItem": "Type an item",
+  "addAPicOfPrescription": "Add a picture of Prescription",
+
+
+  "@_BottomNavBar": {},
+  "home":"Home",
+  "orderInfo":"Order Info",
+  "history":"History",
 
 
   "@_AlertDialog": {},

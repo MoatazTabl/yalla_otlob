@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/helpers/common.dart';
 import 'widgets/history_order_detail_widget.dart';
 
 class UserHistoryPageScreen extends StatelessWidget {
@@ -8,13 +7,8 @@ class UserHistoryPageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          getAppLocalizations(context)!.orders,
-        ),
-      ),
-      body: Column(
+    return
+       Column(
         children: [
           Expanded(
             child: ListView.builder(
@@ -25,7 +19,7 @@ class UserHistoryPageScreen extends StatelessWidget {
             ),
           )
         ],
-      ),
+
     );
   }
 }

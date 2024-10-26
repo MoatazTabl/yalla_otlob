@@ -25,8 +25,8 @@ class _UserConfirmPageScreenState extends State<UserConfirmPageScreen> {
       appBar: AppBar(
         title: Text(getAppLocalizations(context)!.confirmOrder),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: ListView(
+
         children: [
           SizedBox(
             height: 20.h,
@@ -47,6 +47,10 @@ class _UserConfirmPageScreenState extends State<UserConfirmPageScreen> {
             controller: phoneController,
             labelText: getAppLocalizations(context)!.phone,
             initialText: '0106903000',
+          ),ConfirmTextFieldWidget(
+            controller: phoneController,
+            labelText: getAppLocalizations(context)!.address,
+            initialText: 'شارع دهب الرئيسي',
           ),
           ConfirmTextFieldWidget(
             controller: notesController,

@@ -41,6 +41,18 @@
   "confirmOrder": "تأكيد الطلب",
   "approxDeliveryTime": "وقت التسليم التقريبي: ",
   "min": "دقيقة",
+  "address": "العنوان",
+  "addAnItem": "إضافة عنصر",
+  "typeAnItem": "اكتب عنصرا",
+  "addAPicOfPrescription": "أضف صورة الوصفة الطبية",
+
+
+
+  "@_BottomNavBar": {},
+  "home":"الرئيسية",
+  "orderInfo":"الرئيسية",
+  "history":"السجل",
+
 
   "@_AlertDialog": {},
   "ok": "تأكيد",

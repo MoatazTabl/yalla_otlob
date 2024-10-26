@@ -49,6 +49,8 @@ abstract class AppTheme {
         ),
       ),
     ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(selectedItemColor: mainRed,backgroundColor: whiteBackground)
+
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -87,5 +89,6 @@ abstract class AppTheme {
         ),
       ),
     ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(selectedItemColor: mainRed,backgroundColor: mainGrey)
   );
 }
