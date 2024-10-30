@@ -49,46 +49,61 @@ abstract class AppTheme {
         ),
       ),
     ),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(selectedItemColor: mainRed,backgroundColor: whiteBackground)
-
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        selectedItemColor: mainRed, backgroundColor: whiteBackground),
+    dialogTheme: DialogTheme(
+      titleTextStyle: AppFonts.textTheme.labelLarge!.copyWith(
+        color: AppTheme.mainRed,
+        fontWeight: FontWeight.w700,
+      ),
+      contentTextStyle: AppFonts.textTheme.labelMedium!.copyWith(color: Colors.black87),
+    ),
   );
 
   static ThemeData darkTheme = ThemeData(
-    brightness: Brightness.dark,
-    colorScheme:
-        ColorScheme.fromSeed(seedColor: mainRed, brightness: Brightness.dark),
-    textTheme: AppFonts.textTheme,
-    scaffoldBackgroundColor: mainGrey,
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all(mainRed),
-        textStyle: const WidgetStatePropertyAll(
-          TextStyle(color: Colors.white),
+      brightness: Brightness.dark,
+      colorScheme:
+          ColorScheme.fromSeed(seedColor: mainRed, brightness: Brightness.dark),
+      textTheme: AppFonts.textTheme,
+      scaffoldBackgroundColor: mainGrey,
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: WidgetStateProperty.all(mainRed),
+          textStyle: const WidgetStatePropertyAll(
+            TextStyle(color: Colors.white),
+          ),
+          foregroundColor: WidgetStateProperty.all(Colors.white),
         ),
-        foregroundColor: WidgetStateProperty.all(Colors.white),
       ),
-    ),
-    appBarTheme: AppBarTheme(
-      backgroundColor: mainRed,
-      foregroundColor: Colors.white,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(
-          bottom: Radius.circular(
-            14,
+      appBarTheme: AppBarTheme(
+        backgroundColor: mainRed,
+        foregroundColor: Colors.white,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(
+              14,
+            ),
           ),
         ),
       ),
-    ),
-    bottomSheetTheme: BottomSheetThemeData(backgroundColor: mainGrey),
-    snackBarTheme: SnackBarThemeData(
-      backgroundColor: mainRed,
-      behavior: SnackBarBehavior.floating,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(
-          12,
+      bottomSheetTheme: BottomSheetThemeData(backgroundColor: mainGrey),
+      snackBarTheme: SnackBarThemeData(
+        backgroundColor: mainRed,
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            12,
+          ),
         ),
       ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          selectedItemColor: mainRed, backgroundColor: mainGrey),
+    dialogTheme: DialogTheme(
+      titleTextStyle: AppFonts.textTheme.labelLarge!.copyWith(
+        color: AppTheme.mainRed,
+        fontWeight: FontWeight.w700,
+      ),
+      contentTextStyle: AppFonts.textTheme.labelMedium!.copyWith(color: Colors.white),
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(selectedItemColor: mainRed,backgroundColor: mainGrey)
   );
 }

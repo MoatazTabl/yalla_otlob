@@ -25,23 +25,27 @@ class LogInButton extends StatelessWidget {
         ),
       ),
       onPressed: () {
-
         if (_formKey.currentState?.validate() ?? false) {
           if (emailNameRouter.text.toLowerCase() == "admin") {
             context.pushReplacement(AppStrings.adminHomeScreenRoute);
           } else if (emailNameRouter.text.toLowerCase() == "driver") {
             context.pushReplacement(AppStrings.driverHomeScreenRoute);
-          } else if (emailNameRouter.text.toLowerCase() == "partner") {
-            context.pushReplacement(AppStrings.partnerHomeScreenRoute);
+          } else if (emailNameRouter.text.toLowerCase() == "restaurant") {
+            context.pushReplacement(AppStrings.restaurantHomeScreenRoute);
+          } else if (emailNameRouter.text.toLowerCase() == "pharmacy") {
+            context.pushReplacement(AppStrings.pharmacyHomeScreenRoute);
+          } else if (emailNameRouter.text.toLowerCase() == "market") {
+            context.pushReplacement(AppStrings.marketHomeScreenRoute);
+          } else if (emailNameRouter.text.toLowerCase() == "wsly") {
+            context.pushReplacement(AppStrings.wslyHomeScreenRoute);
           } else if (emailNameRouter.text.toLowerCase() == "user") {
-            context.pushReplacement(AppStrings.userHomeScreenRoute);
+            context.pushReplacement(AppStrings.userMainScreenRoute);
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
                 content: Text(
-                  "admin or driver or partner or user.",
+                  "admin or driver or restaurant or pharmacy or market or wsly or user.",
                 ),
-
               ),
             );
           }

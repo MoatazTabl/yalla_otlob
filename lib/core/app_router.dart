@@ -3,21 +3,26 @@ import 'package:dahab_delivery/features/admin/presentation/admin_home_page_scree
 import 'package:dahab_delivery/features/auth/signin/presentation/sign_in_screen.dart';
 import 'package:dahab_delivery/features/auth/signup/presentation/sign_up_screen.dart';
 import 'package:dahab_delivery/features/driver/presentation/driver_home_page_screen.dart';
-import 'package:dahab_delivery/features/partner/presentation/partner_home_page_screen.dart';
-import 'package:dahab_delivery/features/user/manager/market_cubit.dart';
-import 'package:dahab_delivery/features/user/manager/menu_cubit.dart';
-import 'package:dahab_delivery/features/user/manager/pharmacy_cubit.dart';
-import 'package:dahab_delivery/features/user/presentation/user_confirm_page_screen.dart';
+import 'package:dahab_delivery/features/partner/market/presentation/partner_market_screen_page.dart';
+import 'package:dahab_delivery/features/partner/pharmacy/presentation/partner_pharmacy_screen_page.dart';
+import 'package:dahab_delivery/features/partner/restaurant/presentation/partner_restaurant_screen_page.dart';
+import 'package:dahab_delivery/features/partner/wsly/presentation/partner_wsly_screen_page.dart';
+import 'package:dahab_delivery/features/user/market/manager/market_cubit.dart';
+import 'package:dahab_delivery/features/user/restaurant/manager/menu_cubit.dart';
+import 'package:dahab_delivery/features/user/restaurant/presentation/user_confirm_page_screen.dart';
 import 'package:dahab_delivery/features/user/presentation/user_history_page_screen.dart';
 import 'package:dahab_delivery/features/user/presentation/user_main_page_screen.dart';
-import 'package:dahab_delivery/features/user/presentation/user_market_page_screen.dart';
-import 'package:dahab_delivery/features/user/presentation/user_order_detail_page_screen.dart';
-import 'package:dahab_delivery/features/user/presentation/user_pharmacy_page_screen.dart';
-import 'package:dahab_delivery/features/user/presentation/user_restaurant_detail_page.dart';
-import 'package:dahab_delivery/features/user/presentation/user_restaurant_page_screen.dart';
+import 'package:dahab_delivery/features/user/market/presentation/user_market_page_screen.dart';
+import 'package:dahab_delivery/features/user/restaurant/presentation/user_order_detail_page_screen.dart';
+import 'package:dahab_delivery/features/user/pharmacy/presentation/user_pharmacy_page_screen.dart';
+import 'package:dahab_delivery/features/user/restaurant/presentation/user_restaurant_detail_page.dart';
+import 'package:dahab_delivery/features/user/restaurant/presentation/user_restaurant_page_screen.dart';
+import 'package:dahab_delivery/features/user/wsly/presentation/user_wsly_screen_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+
+import '../features/user/pharmacy/manager/pharmacy_cubit.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -51,17 +56,43 @@ class AppRouter {
         },
       ),
 
-      // Partner
+      // Restaurant
       GoRoute(
-        path: AppStrings.partnerHomeScreenRoute,
+        path: AppStrings.restaurantHomeScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
-          return const PartnerHomePageScreen();
+          return const PartnerRestaurantScreenPage();
+        },
+      ),
+
+
+      // Pharmacy
+      GoRoute(
+        path: AppStrings.pharmacyHomeScreenRoute,
+        builder: (BuildContext context, GoRouterState state) {
+          return const PartnerPharmacyScreenPage();
+        },
+      ),
+
+
+      // Market
+      GoRoute(
+        path: AppStrings.marketHomeScreenRoute,
+        builder: (BuildContext context, GoRouterState state) {
+          return const PartnerMarketScreenPage();
+        },
+      ),
+
+      // Wsly
+      GoRoute(
+        path: AppStrings.wslyHomeScreenRoute,
+        builder: (BuildContext context, GoRouterState state) {
+          return const PartnerWslyScreenPage();
         },
       ),
 
       // User
       GoRoute(
-        path: AppStrings.userHomeScreenRoute,
+        path: AppStrings.userMainScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const UserMainPageScreen();
         },
@@ -108,6 +139,12 @@ class AppRouter {
             create:(context) =>  PharmacyCubit(),
             child: const UserPharmacyPageScreen(),
           );
+        },
+      ),
+     GoRoute(
+        path: AppStrings.userWslyScreenRoute,
+        builder: (BuildContext context, GoRouterState state) {
+          return const UserWslyScreenPage();
         },
       ),
       GoRoute(

@@ -23,7 +23,7 @@
   "food": "طعام",
   "market": "متجر",
   "pharmacy": "صيدلية",
-  "wslny": "وصلني",
+  "wsly": "وصلي",
   "topCategory": "أهم الفئات",
   "restaurants": "المطاعم",
   "menu": "قائمة طعام",
@@ -45,6 +45,18 @@
   "addAnItem": "إضافة عنصر",
   "typeAnItem": "اكتب عنصرا",
   "addAPicOfPrescription": "أضف صورة الوصفة الطبية",
+  "addAPicOfItem": "أضف صورة للعنصر",
+  "recipientNumber":"رقم المستلم",
+  "senderNumber":"رقم المرسل",
+  "recipientLocation":"موقع المستلم",
+  "senderLocation":"موقع المرسل",
+  "itemDescription":"وصف السلعة",
+  "status":"الحالة",
+  "totalFee":"الرسوم الإجمالية",
+  "inDelivery":"جاري التوصيل",
+  "warning":"تحذير !",
+  "itemMustNotExceed40Kg":"يجب ألا يتجاوز وزن السلعة 40 كجم",
+  "closed":"مغلق",
 
 
 

@@ -1,9 +1,9 @@
 import 'package:dahab_delivery/core/helpers/common.dart';
 import 'package:dahab_delivery/features/user/presentation/user_history_page_screen.dart';
-import 'package:dahab_delivery/features/user/presentation/user_order_info_screen_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'user_order_info_screen_page.dart';
 import 'user_home_page_screen.dart';
 
 class UserMainPageScreen extends StatefulWidget {
@@ -66,8 +66,6 @@ class _UserMainPageScreenState extends State<UserMainPageScreen> {
     setState(() {
       currentIndex = index;
       if (index == 0) {
-
-
         appBarTitleText = getAppLocalizations(context)!.home;
       } else if (index == 1) {
         appBarTitleText = getAppLocalizations(context)!.orderDetail;

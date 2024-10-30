@@ -23,7 +23,7 @@
   "food": "Food",
   "market": "Market",
   "pharmacy": "Pharmacy",
-  "wslny": "Wslny",
+  "wsly": "Wsly",
   "topCategory": "Top Category",
   "restaurants": "Restaurants",
   "menu": "Menu",
@@ -45,6 +45,19 @@
   "addAnItem": "Add an item",
   "typeAnItem": "Type an item",
   "addAPicOfPrescription": "Add a picture of Prescription",
+  "addAPicOfItem": "Add a picture of Item",
+  "recipientNumber":"Recipient Number",
+  "senderNumber":"Sender Number",
+  "recipientLocation":"Recipient Location",
+  "senderLocation":"Sender Location",
+  "itemDescription":"Item Description",
+  "status":"Status",
+  "totalFee":"Total Fee",
+  "inDelivery":"In Delivery",
+  "warning":"Warning !",
+  "itemMustNotExceed40Kg":"Item must not exceed 40 Kg",
+  "closed":"Closed",
+
 
 
   "@_BottomNavBar": {},

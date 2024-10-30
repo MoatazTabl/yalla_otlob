@@ -1,149 +1,80 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/app_theme.dart';
 import '../../../../core/helpers/common.dart';
+import 'approx_delivery_time_widget.dart';
+import 'price_and_status_widget.dart';
+import 'type_of_delivery_widget.dart';
 
 class OrderDetailWidget extends StatelessWidget {
-  const OrderDetailWidget({
-    super.key,
-  });
+  const OrderDetailWidget({super.key, required this.imgPath});
+
+  final String imgPath;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        bottomSheetSpecialInstructions(context);
-      },
-      child: Container(
-        height: 170.h,
-        margin: EdgeInsets.symmetric(vertical: 10.h, horizontal: 8.w),
-        padding: EdgeInsets.all(8.w),
-        decoration: BoxDecoration(
-          color: const Color(0xffE5E4E2),
-          borderRadius: BorderRadius.circular(
-            16,
-          ),
+    return Container(
+      height: 250.h,
+      margin: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.grey,
         ),
-        child: Row(
-          children: [
-            CachedNetworkImage(
-              imageUrl:
-              "https://bcassetcdn.com/public/blog/wp-content/uploads/2019/07/18094837/golden-diner.png",
-              height: 130.w,
-              width: 130.w,
-              imageBuilder: (context, imageProvider) {
-                return ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Image(image: imageProvider),
-                );
-              },
-            ),
-            SizedBox(
-              width: 5.w,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Text(
-                    "Chicken Ranch Pizza",
-                    style: Theme.of(context)
-                        .textTheme
-                        .labelMedium
-                        ?.copyWith(color: Colors.black),
+        color: const Color(0xffE5E4E2),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          TypeOfDeliveryWidget(imgPath: imgPath),
+          Text(
+            "Bazooka",
+            style: Theme.of(context)
+                .textTheme
+                .labelMedium!
+                .copyWith(fontWeight: FontWeight.w600),
+          ),
+          const ApproxDeliveryTimeWidget(),
+          const PriceAndStatusWidget(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  minimumSize: WidgetStatePropertyAll(
+                    Size(
+                      150.w,
+                      45.h,
+                    ),
                   ),
                 ),
-                Row(
-                  children: [
-                    Text(
-                      getAppLocalizations(context)!.specialInstructions,
-                      style: Theme.of(context)
-                          .textTheme
-                          .labelSmall
-                          ?.copyWith(color: AppTheme.mainRed),
-                    ),
-                    SizedBox(
-                      width: 5.w,
-                    ),
-                    Icon(
-                      Icons.edit,
-                      color: AppTheme.mainRed,
-                    )
-                  ],
+                child: Text(
+                  getAppLocalizations(context)!.cancel,
+                  style: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.white),
                 ),
-                Row(
-                  children: [
-                    Text(getAppLocalizations(context)!.size,
-                        style: Theme.of(context).textTheme.labelMedium),
-                    SizedBox(
-                      width: 3.w,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  minimumSize: WidgetStatePropertyAll(
+                    Size(
+                      150.w,
+                      45.h,
                     ),
-                    Text("Big", style: Theme.of(context).textTheme.labelMedium),
-                  ],
+                  ),
                 ),
-                Text(
-                  "180 EGP",
-                  style: Theme.of(context).textTheme.labelMedium,
+                child: Text(
+                  getAppLocalizations(context)!.confirm,
+                  style: Theme.of(context).textTheme.labelMedium!.copyWith(color: Colors.white),
                 ),
-              ],
-            )
-          ],
-        ),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }
-}
-
-Future<void>bottomSheetSpecialInstructions(BuildContext context)async
-{
-  return showModalBottomSheet(
-    context: context,
-    builder: (context) {
-      return Column(
-        children: [
-          Text(
-            getAppLocalizations(context)!.specialInstructions,
-            style: Theme.of(context)
-                .textTheme
-                .labelLarge
-                ?.copyWith(color: AppTheme.mainRed),
-          ),
-          const Spacer(),
-          Center(
-            child: SizedBox(
-              height: 200.h,
-              width: 0.9.sw,
-              child: TextField(
-                maxLines: 5,
-
-                decoration: InputDecoration(
-                  isDense: true,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(
-                      16,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          const Spacer(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-                width: 200.w,
-                height: 70.h,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(getAppLocalizations(context)!.addNotes,
-                      style: Theme.of(context).textTheme.labelLarge),
-                ),),
-          ),
-        ],
-      );
-    },
-  );
 }

@@ -57,10 +57,10 @@ class HomePageScreen extends StatelessWidget {
                 },
               ),
               CategoryWidget(
-                categoryName: getAppLocalizations(context)!.wslny,
-                categoryPicPath: AppImages.wslnyPic,
+                categoryName: getAppLocalizations(context)!.wsly,
+                categoryPicPath: AppImages.wslyPic,
                 onTap: () {
-                  context.push(AppStrings.userPharmacyScreenRoute);
+                  context.push(AppStrings.userWslyScreenRoute);
                 },
               ),
             ],
