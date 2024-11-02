@@ -36,24 +36,24 @@ class HomePageScreen extends StatelessWidget {
             direction: Axis.horizontal,
             children: [
               CategoryWidget(
-                categoryName: getAppLocalizations(context)!.food,
+                categoryName: getAppLocalizations(context)!.restaurants,
                 categoryPicPath: AppImages.foodPic,
                 onTap: () {
                   context.push(AppStrings.userRestaurantScreenRoute);
                 },
               ),
               CategoryWidget(
-                categoryName: getAppLocalizations(context)!.market,
+                categoryName: getAppLocalizations(context)!.marketNdGroceries,
                 categoryPicPath: AppImages.marketPic,
                 onTap: () {
-                  context.push(AppStrings.userMarketScreenRoute);
+                  context.push(AppStrings.userAvailableMarketScreenRoute);
                 },
               ),
               CategoryWidget(
                 categoryName: getAppLocalizations(context)!.pharmacy,
                 categoryPicPath: AppImages.pharmacyPic,
                 onTap: () {
-                  context.push(AppStrings.userPharmacyScreenRoute);
+                  context.push(AppStrings.userAvailablePharmacyScreenRoute);
                 },
               ),
               CategoryWidget(

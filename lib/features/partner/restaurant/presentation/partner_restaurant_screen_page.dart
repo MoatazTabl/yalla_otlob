@@ -18,6 +18,7 @@ class _PartnerRestaurantScreenPageState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text("Home"),),
       body: IndexedStack(
         index: currentIndex,
         children: const [
@@ -27,10 +28,12 @@ class _PartnerRestaurantScreenPageState
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentIndex,
         onTap: (value) {
           setState(() {
-            currentIndex = value;
           });
+          currentIndex=value;
+
         },
         items: const [
           BottomNavigationBarItem(

@@ -1,11 +1,11 @@
 abstract class AppStrings
 {
-  static String appName="DAHAB";
+  static String appName="Yalla Order";
   static String deliveryService="Delivery Service";
 
   // routes
     // Auth
-  static String loginScreenRoute="/a";
+  static String loginScreenRoute="/";
   static String signupScreenRoute="/signupScreenRoute";
 
     // Admin
@@ -16,7 +16,7 @@ abstract class AppStrings
 
 
     // Restaurant
-  static String restaurantHomeScreenRoute="/";
+  static String restaurantHomeScreenRoute="/restaurantHomeScreenRoute";
 
 
   // Pharmacy
@@ -34,7 +34,9 @@ abstract class AppStrings
   static String userRestaurantDetailScreenRoute="/userRestaurantDetailScreenRoute";
   static String userOrderDetailScreenRoute="/userOrderDetailScreenRoute";
   static String userConfirmScreenRoute="/userConfirmScreenRoute";
+  static String userAvailablePharmacyScreenRoute="/userAvailablePharmacyScreenRoute";
   static String userPharmacyScreenRoute="/userPharmacyScreenRoute";
   static String userWslyScreenRoute="/userWslyScreenRoute";
+  static String userAvailableMarketScreenRoute="/userAvailableMarketScreenRoute";
   static String userMarketScreenRoute="/userMarketScreenRoute";
 }

@@ -8,6 +8,8 @@ import 'package:dahab_delivery/features/partner/pharmacy/presentation/partner_ph
 import 'package:dahab_delivery/features/partner/restaurant/presentation/partner_restaurant_screen_page.dart';
 import 'package:dahab_delivery/features/partner/wsly/presentation/partner_wsly_screen_page.dart';
 import 'package:dahab_delivery/features/user/market/manager/market_cubit.dart';
+import 'package:dahab_delivery/features/user/market/presentation/user_available_markets_page_screen.dart';
+import 'package:dahab_delivery/features/user/pharmacy/presentation/user_available_pharmacy_page_screen.dart';
 import 'package:dahab_delivery/features/user/restaurant/manager/menu_cubit.dart';
 import 'package:dahab_delivery/features/user/restaurant/presentation/user_confirm_page_screen.dart';
 import 'package:dahab_delivery/features/user/presentation/user_history_page_screen.dart';
@@ -64,7 +66,6 @@ class AppRouter {
         },
       ),
 
-
       // Pharmacy
       GoRoute(
         path: AppStrings.pharmacyHomeScreenRoute,
@@ -72,7 +73,6 @@ class AppRouter {
           return const PartnerPharmacyScreenPage();
         },
       ),
-
 
       // Market
       GoRoute(
@@ -136,12 +136,18 @@ class AppRouter {
         path: AppStrings.userPharmacyScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return BlocProvider(
-            create:(context) =>  PharmacyCubit(),
-            child: const UserPharmacyPageScreen(),
+            create: (context) => PharmacyCubit(),
+            child: UserPharmacyPageScreen(heroTag: state.extra as String,),
           );
         },
       ),
-     GoRoute(
+      GoRoute(
+        path: AppStrings.userAvailablePharmacyScreenRoute,
+        builder: (BuildContext context, GoRouterState state) {
+          return const UserAvailablePharmacyPageScreen();
+        },
+      ),
+      GoRoute(
         path: AppStrings.userWslyScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const UserWslyScreenPage();
@@ -150,8 +156,18 @@ class AppRouter {
       GoRoute(
         path: AppStrings.userMarketScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
-          return BlocProvider(create: (BuildContext context)  =>MarketCubit(),
-          child: const UserMarketPageScreen());
+          return BlocProvider(
+            create: (BuildContext context) => MarketCubit(),
+            child: UserMarketPageScreen(
+              heroTag: state.extra as String,
+            ),
+          );
+        },
+      ),
+      GoRoute(
+        path: AppStrings.userAvailableMarketScreenRoute,
+        builder: (BuildContext context, GoRouterState state) {
+          return const UserAvailableMarketsPageScreen();
         },
       ),
     ],

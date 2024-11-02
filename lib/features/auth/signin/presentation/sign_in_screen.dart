@@ -29,32 +29,44 @@ class _SignInScreenState extends State<SignInScreen> {
       body: Form(
         key: _formKey,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.w),
+          padding: EdgeInsets.symmetric(
+            horizontal: 10.w,
+          ),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 100.h),
-                 DahabImageWidget(height: 120.w,width: 120.w,),
+                SizedBox(
+                  height: 100.h,
+                ),
+                DahabImageWidget(
+                  height: 120.w,
+                  width: 120.w,
+                ),
                 Text(
                   AppStrings.appName,
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
-                Text(
-                  AppStrings.deliveryService,
-                  style: Theme.of(context).textTheme.headlineMedium,
+                SizedBox(
+                  height: 30.h,
                 ),
-                SizedBox(height: 30.h),
                 TextFormField(
                   controller: _controllerUsername,
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                     labelText: getAppLocalizations(context)?.userName,
-                    prefixIcon:  Icon(Icons.person_outline,color: Colors.grey[600],),
+                    prefixIcon: Icon(
+                      Icons.person_outline,
+                      color: Colors.grey[600],
+                    ),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(
+                        10,
+                      ),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(
+                        10,
+                      ),
                     ),
                   ),
                   onEditingComplete: () => _focusNodePassword.requestFocus(),
@@ -62,11 +74,13 @@ class _SignInScreenState extends State<SignInScreen> {
                     if (value == null || value.isEmpty) {
                       return getAppLocalizations(context)?.pleaseEnterUserName;
                     }
-            
+
                     return null;
                   },
                 ),
-                SizedBox(height: 10.h),
+                SizedBox(
+                  height: 10.h,
+                ),
                 TextFormField(
                   controller: _controllerPassword,
                   focusNode: _focusNodePassword,
@@ -74,7 +88,10 @@ class _SignInScreenState extends State<SignInScreen> {
                   keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
                     labelText: getAppLocalizations(context)?.password,
-                    prefixIcon: Icon(Icons.password_outlined,color: Colors.grey[600],),
+                    prefixIcon: Icon(
+                      Icons.password_outlined,
+                      color: Colors.grey[600],
+                    ),
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -82,27 +99,44 @@ class _SignInScreenState extends State<SignInScreen> {
                         });
                       },
                       icon: _obscurePassword
-                          ?  Icon(Icons.visibility_outlined,color: Colors.grey[600],)
-                          :  Icon(Icons.visibility_off_outlined,color: Colors.grey[600],),
+                          ? Icon(
+                              Icons.visibility_outlined,
+                              color: Colors.grey[600],
+                            )
+                          : Icon(
+                              Icons.visibility_off_outlined,
+                              color: Colors.grey[600],
+                            ),
                     ),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(
+                        10,
+                      ),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(
+                        10,
+                      ),
                     ),
                   ),
                   validator: (String? value) {
                     if (value == null || value.isEmpty) {
                       return getAppLocalizations(context)?.pleaseEnterPassword;
                     }
-            
+
                     return null;
                   },
                 ),
-                SizedBox(height: 50.h),
-                LogInButton(formKey: _formKey, emailNameRouter: _controllerUsername,),
-                CreateAccountTextWidget(formKey: _formKey),
+                SizedBox(
+                  height: 50.h,
+                ),
+                LogInButton(
+                  formKey: _formKey,
+                  emailNameRouter: _controllerUsername,
+                ),
+                CreateAccountTextWidget(
+                  formKey: _formKey,
+                ),
               ],
             ),
           ),
@@ -120,5 +154,3 @@ class _SignInScreenState extends State<SignInScreen> {
     super.dispose();
   }
 }
-
-

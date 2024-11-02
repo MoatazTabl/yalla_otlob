@@ -37,7 +37,7 @@ class CategoryWidget extends StatelessWidget {
               image: AssetImage(
                 categoryPicPath,
               ),
-              width: 70.w,
+              width: 65.w,
               height: 70.w,
 
               fit: BoxFit.contain,

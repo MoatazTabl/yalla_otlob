@@ -1,4 +1,5 @@
 import 'package:dahab_delivery/core/helpers/common.dart';
+import 'package:dahab_delivery/core/widgets/picture_widget.dart';
 import 'package:dahab_delivery/features/user/presentation/widgets/confirm_button_widget.dart';
 import 'package:dahab_delivery/features/user/presentation/widgets/google_maps_widget.dart';
 import 'package:dahab_delivery/features/user/presentation/widgets/text_form_field_widget.dart';
@@ -10,7 +11,8 @@ import 'widget/add_picture_prescription.dart';
 import 'widget/items_list_view_pharmacy_widget.dart';
 
 class UserPharmacyPageScreen extends StatefulWidget {
-  const UserPharmacyPageScreen({super.key});
+  const UserPharmacyPageScreen({super.key, required this.heroTag});
+  final String heroTag;
 
   @override
   State<UserPharmacyPageScreen> createState() => _UserPharmacyPageScreenState();
@@ -30,6 +32,16 @@ class _UserPharmacyPageScreenState extends State<UserPharmacyPageScreen> {
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
+            Hero(
+              tag: widget.heroTag,
+              child: const PictureWidget(
+                imageUrl:
+                "https://img.freepik.com/free-vector/logo-drugstore_1043-64.jpg?t=st=1730482273~exp=1730485873~hmac=acfdda6adb90f30d02f658d5582468c13e9c96c8315e2588af2edfbf85e7c50d&w=740",
+              ),
+            ),
+            SizedBox(height: 20.h,),
+            Text("${getAppLocalizations(context)!.phone}: 010123234234",style: Theme.of(context).textTheme.labelMedium,),
+            const SizedBox(height: 20),
             const AddItemTextFieldPharmacy(),
             const SizedBox(height: 20),
             const ItemsListViewPharmacyWidget(),

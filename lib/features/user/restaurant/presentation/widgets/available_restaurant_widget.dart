@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/widgets/picture_widget.dart';
 import 'restaurant_name_and_description_widget.dart';
-import 'restaurant_picture_widget.dart';
 
 class AvailableRestaurantWidget extends StatelessWidget {
   const AvailableRestaurantWidget({super.key, required this.heroTag});
@@ -37,7 +37,7 @@ class AvailableRestaurantWidget extends StatelessWidget {
               children: [
                 Hero(
                   tag: heroTag,
-                  child: const RestaurantPictureWidget(
+                  child: const PictureWidget(
                     imageUrl:
                         "https://bcassetcdn.com/public/blog/wp-content/uploads/2019/07/18094837/golden-diner.png",
                   ),

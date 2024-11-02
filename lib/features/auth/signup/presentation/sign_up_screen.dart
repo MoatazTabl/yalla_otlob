@@ -40,39 +40,52 @@ class _SignUpScreenState extends State<SignUpScreen> {
       body: Form(
         key: _formKey,
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 30.w),
+          padding: EdgeInsets.symmetric(
+            horizontal: 30.w,
+          ),
           child: Column(
             children: [
-              SizedBox(height: 30.h),
-              DahabImageWidget(height: 120.w, width: 120.w),
+              SizedBox(
+                height: 30.h,
+              ),
+              DahabImageWidget(
+                height: 120.w,
+                width: 120.w,
+              ),
               Text(
                 AppStrings.appName,
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
-              Text(
-                AppStrings.deliveryService,
-                style: Theme.of(context).textTheme.headlineMedium,
+              SizedBox(
+                height: 10.h,
               ),
-              SizedBox(height: 10.h),
               Text(
                 getAppLocalizations(context)!.createYourAccount,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium
-                    ?.copyWith(fontSize: 18.sp),
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      fontSize: 18.sp,
+                    ),
               ),
-              SizedBox(height: 35.h),
+              SizedBox(
+                height: 35.h,
+              ),
               TextFormField(
                 controller: _controllerName,
                 keyboardType: TextInputType.name,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.name,
-                  prefixIcon:  Icon(Icons.person_outline,color: Colors.grey[600],),
+                  prefixIcon: Icon(
+                    Icons.person_outline,
+                    color: Colors.grey[600],
+                  ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                 ),
                 validator: (String? value) {
@@ -84,32 +97,46 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 },
                 onEditingComplete: () => _focusNodeEmail.requestFocus(),
               ),
-              SizedBox(height: 10.h),
+              SizedBox(
+                height: 10.h,
+              ),
               TextFormField(
                 controller: _controllerEmail,
                 focusNode: _focusNodeEmail,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.email,
-                  prefixIcon:  Icon(Icons.email_outlined,color: Colors.grey[600],),
+                  prefixIcon: Icon(
+                    Icons.email_outlined,
+                    color: Colors.grey[600],
+                  ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                 ),
                 validator: (String? value) {
                   if (value == null || value.isEmpty) {
                     return getAppLocalizations(context)?.pleaseEnterEmail;
-                  } else if (!(value.contains('@') && value.contains('.'))) {
+                  } else if (!(value.contains('@') &&
+                      value.contains(
+                        '.',
+                      ))) {
                     return getAppLocalizations(context)?.invalidEmail;
                   }
                   return null;
                 },
                 onEditingComplete: () => _focusNodeAddressOne.requestFocus(),
               ),
-              SizedBox(height: 10.h),
+              SizedBox(
+                height: 10.h,
+              ),
               TextFormField(
                 controller: _controllerPhone,
                 focusNode: _focusNodePhone,
@@ -117,12 +144,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.phone,
-                  prefixIcon:  Icon(Icons.phone,color: Colors.grey[600],),
+                  prefixIcon: Icon(
+                    Icons.phone,
+                    color: Colors.grey[600],
+                  ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                 ),
                 validator: (String? value) {
@@ -130,27 +164,36 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     return getAppLocalizations(context)?.pleaseEnterPhone;
                   }
                   final regex = RegExp(r"^(010|011|012|015)\d{8}$");
-                  if(!regex.hasMatch(value))
-                    {
-                      return getAppLocalizations(context)?.pleaseEnterCorrectPhoneNumber;
-                    }
+                  if (!regex.hasMatch(value)) {
+                    return getAppLocalizations(context)
+                        ?.pleaseEnterCorrectPhoneNumber;
+                  }
                   return null;
                 },
                 onEditingComplete: () => _focusNodeAddressOne.requestFocus(),
               ),
-              SizedBox(height: 10.h),
+              SizedBox(
+                height: 10.h,
+              ),
               TextFormField(
                 controller: _controllerAddressOne,
                 focusNode: _focusNodeAddressOne,
                 keyboardType: TextInputType.streetAddress,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.address1,
-                  prefixIcon:  Icon(Icons.my_location,color: Colors.grey[600],),
+                  prefixIcon: Icon(
+                    Icons.my_location,
+                    color: Colors.grey[600],
+                  ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                 ),
                 validator: (String? value) {
@@ -161,14 +204,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 },
                 onEditingComplete: () => _focusNodeAddressTwo.requestFocus(),
               ),
-              SizedBox(height: 10.h),
+              SizedBox(
+                height: 10.h,
+              ),
               TextFormField(
                 controller: _controllerAddressTwo,
                 focusNode: _focusNodeAddressTwo,
                 keyboardType: TextInputType.streetAddress,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.address2,
-                  prefixIcon:  Icon(Icons.my_location,color: Colors.grey[600],),
+                  prefixIcon: Icon(
+                    Icons.my_location,
+                    color: Colors.grey[600],
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -178,7 +226,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 onEditingComplete: () => _focusNodePassword.requestFocus(),
               ),
-              SizedBox(height: 10.h),
+              SizedBox(
+                height: 10.h,
+              ),
               TextFormField(
                 controller: _controllerPassword,
                 obscureText: _obscurePassword,
@@ -186,21 +236,35 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.password,
-                  prefixIcon:  Icon(Icons.password_outlined,color: Colors.grey[600],),
+                  prefixIcon: Icon(
+                    Icons.password_outlined,
+                    color: Colors.grey[600],
+                  ),
                   suffixIcon: IconButton(
-                      onPressed: () {
-                        setState(() {
-                          _obscurePassword = !_obscurePassword;
-                        });
-                      },
-                      icon: _obscurePassword
-                          ?  Icon(Icons.visibility_outlined,color: Colors.grey[600],)
-                          :  Icon(Icons.visibility_off_outlined,color: Colors.grey[600],),),
+                    onPressed: () {
+                      setState(() {
+                        _obscurePassword = !_obscurePassword;
+                      });
+                    },
+                    icon: _obscurePassword
+                        ? Icon(
+                            Icons.visibility_outlined,
+                            color: Colors.grey[600],
+                          )
+                        : Icon(
+                            Icons.visibility_off_outlined,
+                            color: Colors.grey[600],
+                          ),
+                  ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                 ),
                 validator: (String? value) {
@@ -215,7 +279,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 onEditingComplete: () =>
                     _focusNodeConfirmPassword.requestFocus(),
               ),
-              SizedBox(height: 10.h),
+              SizedBox(
+                height: 10.h,
+              ),
               TextFormField(
                 controller: _controllerConFirmPassword,
                 obscureText: _obscurePassword,
@@ -223,21 +289,35 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
                   labelText: getAppLocalizations(context)?.confirmPassword,
-                  prefixIcon:  Icon(Icons.password_outlined,color: Colors.grey[600],),
+                  prefixIcon: Icon(
+                    Icons.password_outlined,
+                    color: Colors.grey[600],
+                  ),
                   suffixIcon: IconButton(
-                      onPressed: () {
-                        setState(() {
-                          _obscurePassword = !_obscurePassword;
-                        });
-                      },
-                      icon: _obscurePassword
-                          ?  Icon(Icons.visibility_outlined,color: Colors.grey[600],)
-                          :  Icon(Icons.visibility_off_outlined,color: Colors.grey[600],)),
+                    onPressed: () {
+                      setState(() {
+                        _obscurePassword = !_obscurePassword;
+                      });
+                    },
+                    icon: _obscurePassword
+                        ? Icon(
+                            Icons.visibility_outlined,
+                            color: Colors.grey[600],
+                          )
+                        : Icon(
+                            Icons.visibility_off_outlined,
+                            color: Colors.grey[600],
+                          ),
+                  ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
                   ),
                 ),
                 validator: (String? value) {
@@ -249,25 +329,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   return null;
                 },
               ),
-              SizedBox(height: 50.h),
+              SizedBox(
+                height: 50.h,
+              ),
               Column(
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      minimumSize: const Size.fromHeight(50),
+                      minimumSize: const Size.fromHeight(
+                        50,
+                      ),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(
+                          20,
+                        ),
                       ),
                     ),
                     onPressed: () {
                       if (_formKey.currentState?.validate() ?? false) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            width: 200,
+                            width: 200.w,
                             backgroundColor:
                                 Theme.of(context).colorScheme.secondary,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(
+                                10,
+                              ),
                             ),
                             behavior: SnackBarBehavior.floating,
                             content: const Text("Registered Successfully"),
@@ -279,7 +367,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Navigator.pop(context);
                       }
                     },
-                    child: Text(getAppLocalizations(context)!.register,style: Theme.of(context).textTheme.labelLarge,),
+                    child: Text(
+                      getAppLocalizations(context)!.register,
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -289,7 +380,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         onPressed: () => Navigator.pop(context),
                         child: Text(
                           getAppLocalizations(context)!.login,
-                          style: GoogleFonts.roboto(fontSize: 21.sp,fontWeight: FontWeight.w500),
+                          style: GoogleFonts.roboto(
+                            fontSize: 21.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
                     ],

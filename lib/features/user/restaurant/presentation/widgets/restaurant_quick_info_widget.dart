@@ -56,6 +56,7 @@ class RestaurantQuickInfoWidget extends StatelessWidget {
             label: Text(
               getAppLocalizations(context)!.closed,
             ),
+            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
             padding: EdgeInsets.zero,
             labelStyle: Theme.of(context)
                 .textTheme
@@ -67,6 +68,7 @@ class RestaurantQuickInfoWidget extends StatelessWidget {
               ),
             ),
           ),
+
         ],
       ),
     );
