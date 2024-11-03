@@ -16,7 +16,8 @@ class OrderDetailWidget extends StatelessWidget {
     return Container(
       height: 260.h,
       margin: const EdgeInsets.all(8),
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.grey,

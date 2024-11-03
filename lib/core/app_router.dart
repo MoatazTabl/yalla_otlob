@@ -19,6 +19,7 @@ import 'package:dahab_delivery/features/user/restaurant/presentation/user_order_
 import 'package:dahab_delivery/features/user/pharmacy/presentation/user_pharmacy_page_screen.dart';
 import 'package:dahab_delivery/features/user/restaurant/presentation/user_restaurant_detail_page.dart';
 import 'package:dahab_delivery/features/user/restaurant/presentation/user_restaurant_page_screen.dart';
+import 'package:dahab_delivery/features/user/wslny/presentation/user_wslny_screen_page.dart';
 import 'package:dahab_delivery/features/user/wsly/presentation/user_wsly_screen_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -151,6 +152,12 @@ class AppRouter {
         path: AppStrings.userWslyScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const UserWslyScreenPage();
+        },
+      ),
+      GoRoute(
+        path: AppStrings.userWslyScreenRoute,
+        builder: (BuildContext context, GoRouterState state) {
+          return const UserWslnyScreenPage();
         },
       ),
       GoRoute(

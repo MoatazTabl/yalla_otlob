@@ -63,6 +63,13 @@ class HomePageScreen extends StatelessWidget {
                   context.push(AppStrings.userWslyScreenRoute);
                 },
               ),
+            CategoryWidget(
+                categoryName: getAppLocalizations(context)!.wslny,
+                categoryPicPath: AppImages.wslyPic,
+                onTap: () {
+                  context.push(AppStrings.userWslnyScreenRoute);
+                },
+              ),
             ],
           ),
         ],
