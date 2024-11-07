@@ -1,10 +1,11 @@
 import 'package:dahab_delivery/core/helpers/common.dart';
-import 'package:dahab_delivery/features/user/presentation/widgets/google_maps_widget.dart';
+import 'package:dahab_delivery/features/user/presentation/widgets/small_google_maps_widget.dart';
 import 'package:dahab_delivery/features/user/presentation/widgets/text_form_field_widget.dart';
 import 'package:dahab_delivery/features/user/presentation/widgets/confirm_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'widget/add_picture_description_widget.dart';
 
@@ -41,7 +42,7 @@ class _UserWslyScreenPageState extends State<UserWslyScreenPage> {
                           : Colors.white,
                     ),
               ),
-              const GoogleMapsWidget(),
+              const SmallGoogleMapsWidget(currentLocation: LatLng(312, 23),),
               TextFormFieldWidget(
                   controller: senderNumberController,
                   labelText: getAppLocalizations(context)!.phone,

@@ -54,6 +54,9 @@
   "recipientLocation":"موقع المستلم",
   "senderLocation":"موقع المرسل",
   "itemDescription":"وصف السلعة",
+  "pickUpAddress":"عنوان الالتقاط",
+  "arriveDestination":"مكان الوصول",
+  "numberOfPassengers":"عدد الركاب",
   "status":"الحالة",
   "totalFee":"الرسوم الإجمالية",
   "inDelivery":"جاري التوصيل",
@@ -61,12 +64,22 @@
   "itemMustNotExceed40Kg":"يجب ألا يتجاوز وزن السلعة 40 كجم",
   "closed":"مغلق",
 
-
+  "@_Settings": {},
+  "profile": "الملف الشخصي",
+  "signOut": "تسجيل الخروج",
+  "about": "حول",
+  "gender": "الجنس",
 
   "@_BottomNavBar": {},
   "home":"الرئيسية",
   "orderInfo":"الرئيسية",
   "history":"السجل",
+  "settings": "الاعدادات",
+  "deleteAccount": "حذف الحساب",
+  "oldPass": "كلمة المرور القديمة",
+  "newPass": "كلمة المرور الجديدة",
+  "confirmPass": "تأكيد كلمة المرور",
+  "privacyPolicy": "سياسة الخصوصية",
 
 
   "@_AlertDialog": {},

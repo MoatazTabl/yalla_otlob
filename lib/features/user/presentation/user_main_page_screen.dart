@@ -1,5 +1,6 @@
 import 'package:dahab_delivery/core/helpers/common.dart';
 import 'package:dahab_delivery/features/user/presentation/user_history_page_screen.dart';
+import 'package:dahab_delivery/features/user/presentation/user_settings_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,7 +24,10 @@ class _UserMainPageScreenState extends State<UserMainPageScreen> {
       appBar: AppBar(
         title: Padding(
           padding: EdgeInsets.only(left: 8.w),
-          child: Text(appBarTitleText??getAppLocalizations(context)!.home),
+          child: Text(
+            appBarTitleText ?? getAppLocalizations(context)!.home,
+            style: Theme.of(context).textTheme.labelLarge,
+          ),
         ),
       ),
       body: IndexedStack(
@@ -32,46 +36,61 @@ class _UserMainPageScreenState extends State<UserMainPageScreen> {
           HomePageScreen(),
           UserOrderInfoScreenPage(),
           UserHistoryPageScreen(),
+          UserSettingsPageScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-          currentIndex: currentIndex,
-          onTap: (value) {
-            _onTap(context,value);
-          },
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-              ),
-              label: "",
+        currentIndex: currentIndex,
+        onTap: (value) {
+          _onTap(context, value);
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.delivery_dining,
-              ),
-              label: "",
+            label: "",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.delivery_dining,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.history,
-              ),
-              label: "",
+            label: "",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.history,
             ),
-          ]),
+            label: "",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.settings,
+            ),
+            label: "",
+          ),
+        ],
+      ),
     );
   }
 
-  void _onTap(BuildContext context,int index,) {
-    setState(() {
-      currentIndex = index;
-      if (index == 0) {
-        appBarTitleText = getAppLocalizations(context)!.home;
-      } else if (index == 1) {
-        appBarTitleText = getAppLocalizations(context)!.orderDetail;
-      } else if (index == 2) {
-        appBarTitleText = getAppLocalizations(context)!.history;
-      }
-    });
+  void _onTap(
+    BuildContext context,
+    int index,
+  ) {
+    setState(
+      () {
+        currentIndex = index;
+        if (index == 0) {
+          appBarTitleText = getAppLocalizations(context)!.home;
+        } else if (index == 1) {
+          appBarTitleText = getAppLocalizations(context)!.orderDetail;
+        } else if (index == 2) {
+          appBarTitleText = getAppLocalizations(context)!.history;
+        } else if (index == 3) {
+          appBarTitleText = getAppLocalizations(context)!.settings;
+        }
+      },
+    );
   }
 }

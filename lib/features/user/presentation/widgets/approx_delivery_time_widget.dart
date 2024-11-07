@@ -16,9 +16,7 @@ class ApproxDeliveryTimeWidget extends StatelessWidget {
           TextSpan(
             text: getAppLocalizations(context)!.approxDeliveryTime,
             style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                color: Theme.of(context).brightness == Brightness.light
-                    ? Colors.black87
-                    : Colors.white),
+                color: Colors.black87),
           ),
           TextSpan(
             text: "23",
@@ -30,9 +28,7 @@ class ApproxDeliveryTimeWidget extends StatelessWidget {
           TextSpan(
             text: getAppLocalizations(context)!.min,
             style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                color: Theme.of(context).brightness == Brightness.light
-                    ? Colors.black87
-                    : Colors.white),
+                color:  Colors.black87),
           ),
         ],
       ),

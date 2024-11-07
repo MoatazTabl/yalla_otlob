@@ -26,7 +26,7 @@
   "pharmacy": "Pharmacy",
   "pharmacies": "Pharmacies",
   "wsly": "Wsly",
-  "wslny": "Wslny",
+  "wslny": "PickUp",
   "topCategory": "Top Category",
   "restaurants": "Restaurants",
   "menu": "Menu",
@@ -54,6 +54,9 @@
   "recipientLocation":"Recipient Location",
   "senderLocation":"Sender Location",
   "itemDescription":"Item Description",
+  "pickUpAddress":"Pick Up Address",
+  "arriveDestination":"Arrive Destination",
+  "numberOfPassengers":"Number of Passengers",
   "status":"Status",
   "totalFee":"Total Fee",
   "inDelivery":"In Delivery",
@@ -61,12 +64,24 @@
   "itemMustNotExceed40Kg":"Item must not exceed 40 Kg",
   "closed":"Closed",
 
+  "@_Settings": {},
+  "profile": "Profile",
+  "signOut": "Sign out",
+  "about": "About",
+  "gender": "Gender",
+  "deleteAccount": "Delete Account",
+  "oldPass": "Old Pass",
+  "newPass": "New Pass",
+  "confirmPass": "Confirm Pass",
+  "privacyPolicy": "Privacy Policy",
 
 
   "@_BottomNavBar": {},
   "home":"Home",
   "orderInfo":"Order Info",
   "history":"History",
+  "settings": "Settings",
+
 
 
   "@_AlertDialog": {},

@@ -29,9 +29,7 @@ class TypeOfDeliveryWidget extends StatelessWidget {
           Text(
             getAppLocalizations(context)!.food,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
-              color: Theme.of(context).brightness == Brightness.light
-                  ? Colors.black87
-                  : Colors.white,
+              color: Colors.black87,
             ),
           ),
         ],

@@ -7,8 +7,9 @@ abstract class AppTheme {
   static Color whiteBackground = const Color(0xffFAFAE6);
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
-    scaffoldBackgroundColor: const Color(0xffFAFAE6),
+    scaffoldBackgroundColor: whiteBackground,
     textTheme: AppFonts.textTheme,
+    dividerColor: Colors.grey,
     colorScheme:
         ColorScheme.fromSeed(seedColor: mainRed, brightness: Brightness.light),
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -50,7 +51,8 @@ abstract class AppTheme {
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        selectedItemColor: mainRed, backgroundColor: whiteBackground),
+        selectedItemColor: mainRed, backgroundColor: whiteBackground,
+    enableFeedback: true,type: BottomNavigationBarType.fixed,),
     dialogTheme: DialogTheme(
       titleTextStyle: AppFonts.textTheme.labelLarge!.copyWith(
         color: AppTheme.mainRed,
@@ -62,10 +64,11 @@ abstract class AppTheme {
 
   static ThemeData darkTheme = ThemeData(
       brightness: Brightness.dark,
-      colorScheme:
-          ColorScheme.fromSeed(seedColor: mainRed, brightness: Brightness.dark),
       textTheme: AppFonts.textTheme,
       scaffoldBackgroundColor: mainGrey,
+    dividerColor: Colors.white,
+    colorScheme:
+          ColorScheme.fromSeed(seedColor: mainRed, brightness: Brightness.dark),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all(mainRed),
@@ -97,7 +100,8 @@ abstract class AppTheme {
         ),
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          selectedItemColor: mainRed, backgroundColor: mainGrey),
+          selectedItemColor: mainRed, backgroundColor: mainGrey,
+          enableFeedback: true,type: BottomNavigationBarType.fixed,),
     dialogTheme: DialogTheme(
       titleTextStyle: AppFonts.textTheme.labelLarge!.copyWith(
         color: AppTheme.mainRed,

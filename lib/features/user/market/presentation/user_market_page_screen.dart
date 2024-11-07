@@ -2,8 +2,9 @@ import 'package:dahab_delivery/core/helpers/common.dart';
 import 'package:dahab_delivery/core/widgets/picture_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../../presentation/widgets/google_maps_widget.dart';
+import '../../presentation/widgets/small_google_maps_widget.dart';
 import '../../presentation/widgets/text_form_field_widget.dart';
 import 'widget/add_item_text_field_market_widget.dart';
 import '../../presentation/widgets/confirm_button_widget.dart';
@@ -47,7 +48,7 @@ class _UserMarketPageScreenState extends State<UserMarketPageScreen> {
             const SizedBox(
               height: 10,
             ),
-            const GoogleMapsWidget(),
+            const SmallGoogleMapsWidget(currentLocation: LatLng(312, 23),),
             const SizedBox(
               height: 10,
             ),

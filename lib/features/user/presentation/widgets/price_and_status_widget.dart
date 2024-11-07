@@ -14,18 +14,14 @@ class PriceAndStatusWidget extends StatelessWidget {
         Text(
           "${getAppLocalizations(context)!.totalFee}: 240 EGP",
           style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                color: Theme.of(context).brightness == Brightness.light
-                    ? Colors.black87
-                    : Colors.white,
+                color: Colors.black87,
               ),
         ),
         const Spacer(),
         Text(
           "${getAppLocalizations(context)!.status}: ${getAppLocalizations(context)!.inDelivery}",
           style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                color: Theme.of(context).brightness == Brightness.light
-                    ? Colors.black87
-                    : Colors.white,
+                color: Colors.black87,
               ),
         ),
       ],

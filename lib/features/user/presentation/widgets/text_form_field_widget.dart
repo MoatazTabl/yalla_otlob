@@ -12,16 +12,13 @@ class TextFormFieldWidget extends StatelessWidget {
   final TextEditingController controller;
   final String labelText;
   final String initialText;
-  // final GlobalKey<FormState>formKey;
   final String? Function(String? value)? validator;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(10),
-      width: .9.sw,
+      margin: EdgeInsets.symmetric(horizontal: 18.w,vertical: 10),
       child: TextFormField(
-        // key: formKey,
         controller: controller,
         decoration: InputDecoration(
           hintText: initialText,

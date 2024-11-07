@@ -2,10 +2,11 @@ import 'package:dahab_delivery/core/helpers/common.dart';
 import 'package:dahab_delivery/features/user/presentation/widgets/confirm_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'widgets/approx_delivery_time_widget.dart';
 import '../../presentation/widgets/text_form_field_widget.dart';
-import '../../presentation/widgets/google_maps_widget.dart';
+import '../../presentation/widgets/small_google_maps_widget.dart';
 
 class UserConfirmPageScreen extends StatefulWidget {
   const UserConfirmPageScreen({super.key});
@@ -37,7 +38,7 @@ class _UserConfirmPageScreenState extends State<UserConfirmPageScreen> {
             ),
             const Align(
               alignment: Alignment.center,
-              child: GoogleMapsWidget(),
+              child: SmallGoogleMapsWidget(currentLocation: LatLng(312, 23),),
             ),
             SizedBox(
               height: 10.h,

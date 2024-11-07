@@ -10,16 +10,18 @@ import 'package:dahab_delivery/features/partner/wsly/presentation/partner_wsly_s
 import 'package:dahab_delivery/features/user/market/manager/market_cubit.dart';
 import 'package:dahab_delivery/features/user/market/presentation/user_available_markets_page_screen.dart';
 import 'package:dahab_delivery/features/user/pharmacy/presentation/user_available_pharmacy_page_screen.dart';
+import 'package:dahab_delivery/features/user/pickup/manager/pick_up_cubit.dart';
+import 'package:dahab_delivery/features/user/pickup/presentation/user_pickup_screen_page.dart';
 import 'package:dahab_delivery/features/user/restaurant/manager/menu_cubit.dart';
 import 'package:dahab_delivery/features/user/restaurant/presentation/user_confirm_page_screen.dart';
-import 'package:dahab_delivery/features/user/presentation/user_history_page_screen.dart';
 import 'package:dahab_delivery/features/user/presentation/user_main_page_screen.dart';
 import 'package:dahab_delivery/features/user/market/presentation/user_market_page_screen.dart';
 import 'package:dahab_delivery/features/user/restaurant/presentation/user_order_detail_page_screen.dart';
 import 'package:dahab_delivery/features/user/pharmacy/presentation/user_pharmacy_page_screen.dart';
 import 'package:dahab_delivery/features/user/restaurant/presentation/user_restaurant_detail_page.dart';
 import 'package:dahab_delivery/features/user/restaurant/presentation/user_restaurant_page_screen.dart';
-import 'package:dahab_delivery/features/user/wslny/presentation/user_wslny_screen_page.dart';
+import 'package:dahab_delivery/features/user/settigns/presentation/user_about_screen_page.dart';
+import 'package:dahab_delivery/features/user/settigns/presentation/user_profile_screen_page.dart';
 import 'package:dahab_delivery/features/user/wsly/presentation/user_wsly_screen_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -99,12 +101,6 @@ class AppRouter {
         },
       ),
       GoRoute(
-        path: AppStrings.userHistoryScreenRoute,
-        builder: (BuildContext context, GoRouterState state) {
-          return const UserHistoryPageScreen();
-        },
-      ),
-      GoRoute(
         path: AppStrings.userRestaurantScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
           return const UserRestaurantPageScreen();
@@ -155,9 +151,10 @@ class AppRouter {
         },
       ),
       GoRoute(
-        path: AppStrings.userWslyScreenRoute,
+        path: AppStrings.userPickUpScreenRoute,
         builder: (BuildContext context, GoRouterState state) {
-          return const UserWslnyScreenPage();
+          return BlocProvider(create: (BuildContext context)  =>PickUpCubit(),
+          child: const UserPickUpScreenPage());
         },
       ),
       GoRoute(
@@ -177,6 +174,17 @@ class AppRouter {
           return const UserAvailableMarketsPageScreen();
         },
       ),
+      // Settings
+      GoRoute(path:AppStrings.userAboutScreenRoute,
+        builder: (context, state) {
+          return const UserAboutScreenPage();
+        },
+      ),
+    GoRoute(path:AppStrings.userProfileScreenRoute,
+        builder: (context, state) {
+          return const UserProfileScreenPage();
+        },
+      )
     ],
   );
 }

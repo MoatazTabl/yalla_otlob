@@ -1,10 +1,11 @@
 import 'package:dahab_delivery/core/helpers/common.dart';
 import 'package:dahab_delivery/core/widgets/picture_widget.dart';
 import 'package:dahab_delivery/features/user/presentation/widgets/confirm_button_widget.dart';
-import 'package:dahab_delivery/features/user/presentation/widgets/google_maps_widget.dart';
+import 'package:dahab_delivery/features/user/presentation/widgets/small_google_maps_widget.dart';
 import 'package:dahab_delivery/features/user/presentation/widgets/text_form_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'widget/add_items_text_field_pharmacy.dart';
 import 'widget/add_picture_prescription.dart';
@@ -50,7 +51,7 @@ class _UserPharmacyPageScreenState extends State<UserPharmacyPageScreen> {
             ),
             const AddPicturePrescription(),
             const SizedBox(height: 10,),
-            const GoogleMapsWidget(),
+            const SmallGoogleMapsWidget(currentLocation: LatLng(312, 23),),
             const SizedBox(height: 10,),
 
             TextFormFieldWidget(
