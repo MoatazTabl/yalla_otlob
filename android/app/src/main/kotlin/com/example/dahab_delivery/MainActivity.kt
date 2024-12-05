@@ -1,4 +1,4 @@
-package com.example.dahab_delivery
+package com.example.yalla_otlob
 
 import io.flutter.embedding.android.FlutterActivity
 

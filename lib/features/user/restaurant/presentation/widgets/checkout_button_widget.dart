@@ -1,4 +1,4 @@
-import 'package:dahab_delivery/core/app_strings.dart';
+import 'package:yalla_otlob/core/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

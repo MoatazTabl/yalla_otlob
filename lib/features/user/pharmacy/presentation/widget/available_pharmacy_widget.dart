@@ -65,7 +65,7 @@ class AvailablePharmacyWidget extends StatelessWidget {
                     labelStyle: Theme.of(context)
                         .textTheme
                         .labelMedium!
-                        .copyWith(color: AppTheme.mainRed),
+                        .copyWith(color: AppTheme.vividRed),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(
                         16,

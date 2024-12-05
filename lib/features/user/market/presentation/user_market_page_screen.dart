@@ -1,5 +1,5 @@
-import 'package:dahab_delivery/core/helpers/common.dart';
-import 'package:dahab_delivery/core/widgets/picture_widget.dart';
+import 'package:yalla_otlob/core/helpers/common.dart';
+import 'package:yalla_otlob/core/widgets/picture_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';

@@ -1,5 +1,5 @@
-import 'package:dahab_delivery/core/app_theme.dart';
-import 'package:dahab_delivery/core/helpers/common.dart';
+import 'package:yalla_otlob/core/app_theme.dart';
+import 'package:yalla_otlob/core/helpers/common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -27,7 +27,7 @@ class RestaurantMenuItem extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: Theme.of(context).textTheme.labelSmall?.copyWith(
-              color: AppTheme.mainRed),
+              color: AppTheme.vividRed),
         ),
         SizedBox(
           height: 7.h,
@@ -71,7 +71,7 @@ Future<void> chooseSize(BuildContext context) async {
                   style: Theme.of(context)
                       .textTheme
                       .labelMedium!
-                      .copyWith(color: AppTheme.mainRed),
+                      .copyWith(color: AppTheme.vividRed),
                 ),
               ),
               TextButton(
@@ -83,7 +83,7 @@ Future<void> chooseSize(BuildContext context) async {
                   style: Theme.of(context)
                       .textTheme
                       .labelMedium
-                      ?.copyWith(color: AppTheme.mainRed),
+                      ?.copyWith(color: AppTheme.vividRed),
                 ),
               ),
             ],
@@ -96,7 +96,7 @@ Future<void> chooseSize(BuildContext context) async {
             ),
             backgroundColor: Theme.of(context).brightness == Brightness.light
                 ? AppTheme.whiteBackground
-                : AppTheme.mainGrey,
+                : AppTheme.darkGrey,
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [

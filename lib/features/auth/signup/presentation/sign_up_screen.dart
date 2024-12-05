@@ -1,5 +1,5 @@
-import 'package:dahab_delivery/core/helpers/common.dart';
-import 'package:dahab_delivery/core/widgets/dahab_image_widget.dart';
+import 'package:yalla_otlob/core/helpers/common.dart';
+import 'package:yalla_otlob/core/widgets/yalla_otlob_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -48,7 +48,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: 30.h,
               ),
-              DahabImageWidget(
+              YallaOtlobImageWidget(
                 height: 120.w,
                 width: 120.w,
               ),

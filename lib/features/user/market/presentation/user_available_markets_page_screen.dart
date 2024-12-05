@@ -1,4 +1,4 @@
-import 'package:dahab_delivery/core/helpers/common.dart';
+import 'package:yalla_otlob/core/helpers/common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -95,7 +95,7 @@ class AvailableMarketWidget extends StatelessWidget {
                   labelStyle: Theme.of(context)
                       .textTheme
                       .labelMedium!
-                      .copyWith(color: AppTheme.mainRed),
+                      .copyWith(color: AppTheme.vividRed),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
                       16,

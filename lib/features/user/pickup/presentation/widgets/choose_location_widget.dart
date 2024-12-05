@@ -28,7 +28,7 @@ class _ChooseLocationWidgetState extends State<ChooseLocationWidget> {
     return OpenContainer(
       closedColor: Theme.of(context).brightness == Brightness.light
           ? AppTheme.whiteBackground
-          : AppTheme.mainGrey,
+          : AppTheme.darkGrey,
       openColor: Colors.transparent,
       closedElevation: 0,
       onClosed: (data) {

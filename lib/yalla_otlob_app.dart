@@ -1,11 +1,11 @@
-import 'package:dahab_delivery/core/app_router.dart';
+import 'package:yalla_otlob/core/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class DahabDeliveryMain extends StatelessWidget {
-  const DahabDeliveryMain({super.key});
+class YallaOtlobMain extends StatelessWidget {
+  const YallaOtlobMain({super.key});
 
   @override
   Widget build(BuildContext context) {

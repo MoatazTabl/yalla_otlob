@@ -63,14 +63,14 @@ class OrderDetailWidget extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .labelSmall
-                          ?.copyWith(color: AppTheme.mainRed),
+                          ?.copyWith(color: AppTheme.vividRed),
                     ),
                     SizedBox(
                       width: 5.w,
                     ),
                     Icon(
                       Icons.edit,
-                      color: AppTheme.mainRed,
+                      color: AppTheme.vividRed,
                     )
                   ],
                 ),
@@ -109,7 +109,7 @@ Future<void>bottomSheetSpecialInstructions(BuildContext context)async
             style: Theme.of(context)
                 .textTheme
                 .labelLarge
-                ?.copyWith(color: AppTheme.mainRed),
+                ?.copyWith(color: AppTheme.vividRed),
           ),
           const Spacer(),
           Center(

@@ -1,5 +1,5 @@
-import 'package:dahab_delivery/core/app_strings.dart';
-import 'package:dahab_delivery/features/user/restaurant/presentation/widgets/restaurant_quick_info_widget.dart';
+import 'package:yalla_otlob/core/app_strings.dart';
+import 'package:yalla_otlob/features/user/restaurant/presentation/widgets/restaurant_quick_info_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';

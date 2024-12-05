@@ -1,6 +1,6 @@
-import 'package:dahab_delivery/core/helpers/common.dart';
-import 'package:dahab_delivery/features/user/presentation/user_history_page_screen.dart';
-import 'package:dahab_delivery/features/user/presentation/user_settings_page_screen.dart';
+import 'package:yalla_otlob/core/helpers/common.dart';
+import 'package:yalla_otlob/features/user/presentation/user_history_page_screen.dart';
+import 'package:yalla_otlob/features/user/presentation/user_settings_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

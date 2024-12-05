@@ -1,4 +1,4 @@
-import 'package:dahab_delivery/core/app_images.dart';
+import 'package:yalla_otlob/core/app_images.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/order_detail_widget.dart';

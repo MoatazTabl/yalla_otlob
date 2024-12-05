@@ -1,4 +1,4 @@
-import 'package:dahab_delivery/core/app_theme.dart';
+import 'package:yalla_otlob/core/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -28,7 +28,7 @@ class _PartnerRestaurantHomePageState extends State<PartnerRestaurantHomePage> {
               },
               style: ButtonStyle(
                 backgroundColor: WidgetStatePropertyAll(
-                  shiftStarted ? AppTheme.mainRed : Colors.white70,
+                  shiftStarted ? AppTheme.vividRed : Colors.white70,
                 ),
                 minimumSize: WidgetStatePropertyAll(
                   Size(

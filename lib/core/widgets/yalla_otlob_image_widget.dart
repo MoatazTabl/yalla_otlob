@@ -1,9 +1,9 @@
-import 'package:dahab_delivery/core/app_images.dart';
+import 'package:yalla_otlob/core/app_images.dart';
 import 'package:flutter/material.dart';
 
 
-class DahabImageWidget extends StatelessWidget {
-  const DahabImageWidget({
+class YallaOtlobImageWidget extends StatelessWidget {
+  const YallaOtlobImageWidget({
     super.key, required this.height, required this.width,
   });
   final double height;
@@ -13,7 +13,7 @@ class DahabImageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image(
       image: AssetImage(
-        AppImages.dahabLogo,
+        AppImages.yallaOtlobLogo,
       ),
       height: height,
       width: width,

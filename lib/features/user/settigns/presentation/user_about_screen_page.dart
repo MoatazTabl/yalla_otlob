@@ -1,6 +1,6 @@
-import 'package:dahab_delivery/core/app_strings.dart';
-import 'package:dahab_delivery/core/helpers/common.dart';
-import 'package:dahab_delivery/features/user/presentation/widgets/custom_list_tile_widget.dart';
+import 'package:yalla_otlob/core/app_strings.dart';
+import 'package:yalla_otlob/core/helpers/common.dart';
+import 'package:yalla_otlob/features/user/presentation/widgets/custom_list_tile_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

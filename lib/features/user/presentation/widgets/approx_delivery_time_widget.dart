@@ -23,7 +23,7 @@ class ApproxDeliveryTimeWidget extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .labelSmall
-                ?.copyWith(color: AppTheme.mainRed),
+                ?.copyWith(color: AppTheme.vividRed),
           ),
           TextSpan(
             text: getAppLocalizations(context)!.min,

@@ -1,6 +1,6 @@
-import 'package:dahab_delivery/features/partner/restaurant/presentation/partner_restaurant_active_orders_page.dart';
-import 'package:dahab_delivery/features/partner/restaurant/presentation/partner_restaurant_history_page.dart';
-import 'package:dahab_delivery/features/partner/restaurant/presentation/partner_restaurant_home_page.dart';
+import 'package:yalla_otlob/features/partner/restaurant/presentation/partner_restaurant_active_orders_page.dart';
+import 'package:yalla_otlob/features/partner/restaurant/presentation/partner_restaurant_history_page.dart';
+import 'package:yalla_otlob/features/partner/restaurant/presentation/partner_restaurant_home_page.dart';
 import 'package:flutter/material.dart';
 
 class PartnerRestaurantScreenPage extends StatefulWidget {

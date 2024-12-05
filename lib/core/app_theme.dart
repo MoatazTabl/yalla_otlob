@@ -1,9 +1,9 @@
-import 'package:dahab_delivery/core/app_font.dart';
+import 'package:yalla_otlob/core/app_font.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppTheme {
-  static Color mainRed = const Color(0xffee1d23);
-  static Color mainGrey = const Color(0xff121212);
+  static Color vividRed = const Color(0xffDb3D1A);
+  static Color darkGrey = const Color(0xff7F7F7F);
   static Color whiteBackground = const Color(0xffFAFAE6);
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
@@ -11,10 +11,10 @@ abstract class AppTheme {
     textTheme: AppFonts.textTheme,
     dividerColor: Colors.grey,
     colorScheme:
-        ColorScheme.fromSeed(seedColor: mainRed, brightness: Brightness.light),
+        ColorScheme.fromSeed(seedColor: vividRed, brightness: Brightness.light),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all(mainRed),
+        backgroundColor: WidgetStateProperty.all(vividRed),
         textStyle: const WidgetStatePropertyAll(
           TextStyle(color: Colors.white),
         ),
@@ -22,16 +22,19 @@ abstract class AppTheme {
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
-        labelStyle: TextStyle(
-          color: Colors.grey[700],
-        ),
-        hintStyle:
-            AppFonts.textTheme.labelSmall?.copyWith(color: Colors.grey[700])),
+      labelStyle: TextStyle(
+        color: Colors.grey[700],
+      ),
+      hintStyle: AppFonts.textTheme.labelSmall?.copyWith(
+        color: Colors.grey[700],
+      ),
+    ),
     appBarTheme: AppBarTheme(
-      backgroundColor: mainRed,
+      backgroundColor: vividRed,
       foregroundColor: Colors.white,
-      titleTextStyle:
-          AppFonts.textTheme.labelLarge?.copyWith(color: Colors.white),
+      titleTextStyle: AppFonts.textTheme.labelLarge?.copyWith(
+        color: Colors.white,
+      ),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
           bottom: Radius.circular(
@@ -40,9 +43,11 @@ abstract class AppTheme {
         ),
       ),
     ),
-    bottomSheetTheme: BottomSheetThemeData(backgroundColor: whiteBackground),
+    bottomSheetTheme: BottomSheetThemeData(
+      backgroundColor: whiteBackground,
+    ),
     snackBarTheme: SnackBarThemeData(
-      backgroundColor: mainRed,
+      backgroundColor: vividRed,
       behavior: SnackBarBehavior.floating,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(
@@ -51,63 +56,80 @@ abstract class AppTheme {
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        selectedItemColor: mainRed, backgroundColor: whiteBackground,
-    enableFeedback: true,type: BottomNavigationBarType.fixed,),
+      selectedItemColor: vividRed,
+      backgroundColor: whiteBackground,
+      enableFeedback: true,
+      type: BottomNavigationBarType.fixed,
+    ),
     dialogTheme: DialogTheme(
       titleTextStyle: AppFonts.textTheme.labelLarge!.copyWith(
-        color: AppTheme.mainRed,
+        color: AppTheme.vividRed,
         fontWeight: FontWeight.w700,
       ),
-      contentTextStyle: AppFonts.textTheme.labelMedium!.copyWith(color: Colors.black87),
+      contentTextStyle:
+          AppFonts.textTheme.labelMedium!.copyWith(color: Colors.black87),
     ),
   );
 
   static ThemeData darkTheme = ThemeData(
-      brightness: Brightness.dark,
-      textTheme: AppFonts.textTheme,
-      scaffoldBackgroundColor: mainGrey,
+    brightness: Brightness.dark,
+    textTheme: AppFonts.textTheme,
+    scaffoldBackgroundColor: darkGrey,
     dividerColor: Colors.white,
-    colorScheme:
-          ColorScheme.fromSeed(seedColor: mainRed, brightness: Brightness.dark),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(mainRed),
-          textStyle: const WidgetStatePropertyAll(
-            TextStyle(color: Colors.white),
-          ),
-          foregroundColor: WidgetStateProperty.all(Colors.white),
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: vividRed,
+      brightness: Brightness.dark,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all(
+          vividRed,
+        ),
+        textStyle: const WidgetStatePropertyAll(
+          TextStyle(color: Colors.white),
+        ),
+        foregroundColor: WidgetStateProperty.all(
+          Colors.white,
         ),
       ),
-      appBarTheme: AppBarTheme(
-        backgroundColor: mainRed,
-        foregroundColor: Colors.white,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(
-              14,
-            ),
-          ),
-        ),
-      ),
-      bottomSheetTheme: BottomSheetThemeData(backgroundColor: mainGrey),
-      snackBarTheme: SnackBarThemeData(
-        backgroundColor: mainRed,
-        behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(
-            12,
+    ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: vividRed,
+      foregroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(
+            14,
           ),
         ),
       ),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          selectedItemColor: mainRed, backgroundColor: mainGrey,
-          enableFeedback: true,type: BottomNavigationBarType.fixed,),
+    ),
+    bottomSheetTheme: BottomSheetThemeData(
+      backgroundColor: darkGrey,
+    ),
+    snackBarTheme: SnackBarThemeData(
+      backgroundColor: vividRed,
+      behavior: SnackBarBehavior.floating,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(
+          12,
+        ),
+      ),
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: vividRed,
+      backgroundColor: darkGrey,
+      enableFeedback: true,
+      type: BottomNavigationBarType.fixed,
+    ),
     dialogTheme: DialogTheme(
       titleTextStyle: AppFonts.textTheme.labelLarge!.copyWith(
-        color: AppTheme.mainRed,
+        color: AppTheme.vividRed,
         fontWeight: FontWeight.w700,
       ),
-      contentTextStyle: AppFonts.textTheme.labelMedium!.copyWith(color: Colors.white),
+      contentTextStyle: AppFonts.textTheme.labelMedium!.copyWith(
+        color: Colors.white,
+      ),
     ),
   );
 }

@@ -1,5 +1,5 @@
-import 'package:dahab_delivery/core/app_theme.dart';
-import 'package:dahab_delivery/core/helpers/common.dart';
+import 'package:yalla_otlob/core/app_theme.dart';
+import 'package:yalla_otlob/core/helpers/common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -61,7 +61,7 @@ class RestaurantQuickInfoWidget extends StatelessWidget {
             labelStyle: Theme.of(context)
                 .textTheme
                 .labelMedium!
-                .copyWith(color: AppTheme.mainRed),
+                .copyWith(color: AppTheme.vividRed),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
                 16,

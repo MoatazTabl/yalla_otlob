@@ -1,10 +1,10 @@
-import 'package:dahab_delivery/core/app_strings.dart';
-import 'package:dahab_delivery/core/helpers/common.dart';
-import 'package:dahab_delivery/features/auth/signin/presentation/widgets/create_account_widget.dart';
+import 'package:yalla_otlob/core/app_strings.dart';
+import 'package:yalla_otlob/core/helpers/common.dart';
+import 'package:yalla_otlob/features/auth/signin/presentation/widgets/create_account_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/widgets/dahab_image_widget.dart';
+import '../../../../core/widgets/yalla_otlob_image_widget.dart';
 import 'widgets/log_in_button.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -38,7 +38,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 SizedBox(
                   height: 100.h,
                 ),
-                DahabImageWidget(
+                YallaOtlobImageWidget(
                   height: 120.w,
                   width: 120.w,
                 ),

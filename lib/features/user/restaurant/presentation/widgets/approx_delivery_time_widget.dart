@@ -1,4 +1,4 @@
-import 'package:dahab_delivery/core/helpers/common.dart';
+import 'package:yalla_otlob/core/helpers/common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,7 +16,7 @@ class ApproxDeliveryTimeWidget extends StatelessWidget {
       children: [
         Icon(
           Icons.delivery_dining,
-          color: AppTheme.mainRed,
+          color: AppTheme.vividRed,
           size: 42.r,
         ),
         SizedBox(
@@ -36,7 +36,7 @@ class ApproxDeliveryTimeWidget extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .labelMedium
-                    ?.copyWith(color: AppTheme.mainRed),
+                    ?.copyWith(color: AppTheme.vividRed),
               ),
               TextSpan(
                 text: getAppLocalizations(context)!.min,

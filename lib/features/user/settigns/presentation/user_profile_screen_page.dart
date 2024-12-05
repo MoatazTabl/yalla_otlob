@@ -1,8 +1,7 @@
-import 'package:dahab_delivery/core/app_font.dart';
-import 'package:dahab_delivery/core/helpers/common.dart';
-import 'package:dahab_delivery/features/user/presentation/widgets/confirm_button_widget.dart';
-import 'package:dahab_delivery/features/user/presentation/widgets/custom_list_tile_widget.dart';
-import 'package:dahab_delivery/features/user/presentation/widgets/text_form_field_widget.dart';
+import 'package:yalla_otlob/core/helpers/common.dart';
+import 'package:yalla_otlob/features/user/presentation/widgets/confirm_button_widget.dart';
+import 'package:yalla_otlob/features/user/presentation/widgets/custom_list_tile_widget.dart';
+import 'package:yalla_otlob/features/user/presentation/widgets/text_form_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
